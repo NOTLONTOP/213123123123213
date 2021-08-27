@@ -1,0 +1,60 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local Submit = Instance.new("TextButton")
+local imput = Instance.new("TextBox")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.Position = UDim2.new(0.39178285, 0, 0.29815948, 0)
+main.Size = UDim2.new(0, 352, 0, 328)
+
+Submit.Name = "Submit"
+Submit.Parent = main
+Submit.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Submit.Position = UDim2.new(0.214587644, 0, 0.76270014, 0)
+Submit.Size = UDim2.new(0, 200, 0, 50)
+Submit.Font = Enum.Font.SourceSans
+Submit.Text = "Submit"
+Submit.TextColor3 = Color3.fromRGB(0, 255, 0)
+Submit.TextSize = 45.000
+Submit.MouseButton1Down:connect(function()
+	if imput.Text == "NOTLWINNING" then
+main.Visible = false
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NOTLONTOP/idk/Hey/aaa?token=AUW5L735FKGXH5BG6MBWM2TBFFLB4", true))()
+
+end
+	end)
+imput.Name = "imput"
+imput.Parent = main
+imput.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+imput.Position = UDim2.new(0, 0, 0.173780486, 0)
+imput.Size = UDim2.new(0, 352, 0, 50)
+imput.Font = Enum.Font.SourceSans
+imput.Text = "CODE HERE"
+imput.TextColor3 = Color3.fromRGB(0, 255, 0)
+imput.TextSize = 34.000
+
+-- Scripts:
+
+local function KCTN_fake_script() -- main.LocalScript 
+	local script = Instance.new('LocalScript', main)
+
+	local object = script.Parent
+	object.AnchorPoint = Vector2.new(0.5, 0.5)
+	object.Position = UDim2.new(0, -object.Size.X.Offset, 0.5, 0)
+	
+	wait(1)
+	
+	object:TweenSizeAndPosition(UDim2.new(0.4, 0, 0.4, 0), UDim2.new(0.5, 0, 0.5, 0))
+end
+coroutine.wrap(KCTN_fake_script)()
